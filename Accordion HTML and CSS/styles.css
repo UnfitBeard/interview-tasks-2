@@ -94,12 +94,10 @@ img, svg {
     display: none;
 }
 
-/* Show the plus icon when the radio is not checked */
 .accordion-item input[type="radio"]:not(:checked) + label .icons .plus-icon {
     display: inline-block;
 }
 
-/* Show the minus icon when the radio is checked */
 .accordion-item input[type="radio"]:checked + label .icons .minus-icon {
     display: inline-block;
 }
