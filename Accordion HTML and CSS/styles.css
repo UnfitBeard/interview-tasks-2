@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-blue: hsl(224, 84%, 70%);
+    --grayish-blue: hsl(224, 39%, 45%);
+    --dark-blue: hsl(250, 100%, 16%);
+}
+
+body {
+    background: linear-gradient(to left, rgb(1, 1, 135), white);
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    background-color: var(--white);
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-headline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.faq-headline h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+}
+
+.accordion-item {
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.accordion-item input[type="radio"] {
+    display: none;
+}
+
+.accordion-item input[type="radio"] {
+    display: none;
+}
+
+.accordion-item label {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--light-blue);
+    border-radius: 1rem;
+}
+
+.accordion-item label:hover {
+    background-color: var(--light-blue);
+}
+
+.accordion-item .icons img {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+/* Show the plus icon when the radio is not checked */
+.accordion-item input[type="radio"]:not(:checked) + label .icons .plus-icon {
+    display: inline-block;
+}
+
+/* Show the minus icon when the radio is checked */
+.accordion-item input[type="radio"]:checked + label .icons .minus-icon {
+    display: inline-block;
+}
+
+.accordion-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 2rem;
+}
+
+.accordion-item input[type="radio"]:checked + label + .accordion-description {
+    max-height: 200px; /* Ensure description reveals appropriately */
+    padding: 1rem 2rem;
+}
+
+.accordion-description p {
+    color: var(--grayish-blue);
+}
+
+@media (max-width: 540px) {
+    body {
+        background-image: url(assets/images/background.png);
+    }
+
+    .faq-headline h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .accordion-item label {
+        font-size: 1rem;
+    }
+    .accordion-item .icons img {
+        min-width: 20px;
+        min-height: 20px;
+        display: none;
+    }
+}
