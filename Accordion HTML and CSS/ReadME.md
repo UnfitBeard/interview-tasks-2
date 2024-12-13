@@ -1,4 +1,4 @@
 # The results of the laptop and mobile designs.
-![PC Design](output/pcdesign.png)
-![Mobile Design](output/mobiledesign.png)
+![PC Design](output/pcDesignHover.png)
+![Mobile Design](output/mobileDesign.png)
 
