@@ -110,7 +110,7 @@ img, svg {
 }
 
 .accordion-item input[type="radio"]:checked + label + .accordion-description {
-    max-height: 200px; /* Ensure description reveals appropriately */
+    max-height: 200px;
     padding: 1rem 2rem;
 }
 
